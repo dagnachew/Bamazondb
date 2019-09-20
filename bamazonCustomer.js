@@ -81,7 +81,7 @@ function takeOrder(){
           // let itemprice = price;
           let total =  parseInt(price * answer.quantity);
           connection.query (
-            "UPDATE products SET stock_quantity = " + newQuantity + " WHERE item_id = " + res[0].item_id,
+            "UPDATE products SET stock_quantity = " + newQuantity + " WHERE item_id = " + res[0].item_id, //https://stackoverflow.com/questions/14992879/node-js-mysql-query-syntax-issues-update-where
             function(err, res) {
               if(err) throw err;
               
